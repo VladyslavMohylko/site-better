@@ -272,7 +272,101 @@ body {
     max-width: 100%;
 }
 
+
+/* second sec start */
+.page_how {
+}
+.how {
+    padding-top: 110px;
+    padding-bottom: 110px;
+}
+.how_container {
+}
+.how_title {
+    margin-bottom: 70px;
+}
+.title {
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 1.375;
+}
+.title_center {
+    text-align: center;
+}
+.how_items {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(auto, 260px));
+    gap: 30px;
+    row-gap: 45px;
+    justify-content: space-between;
+}
+.how_item {
+}
+.item-how {
+    text-align: center;
+    display: grid;
+    align-self: start;
+    justify-items: center;
+    position: relative;
+}
+.item-how_icon {
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    height: 90px;
+    width: 90px;
+}
+.item-how_1 .item-how_icon{
+    background-color: blueviolet;
+}
+.item-how_1::after {
+    content: "";
+    position: absolute;
+    transform: translate(92%, 0px);
+    right: 0;
+    top: 41px;
+    width: 100%;
+    height: 11px;
+    background: url('../img/main/second/Group\ 20.svg') 0 0 / 100% no-repeat;
+    max-width: 210px;
+}
+.item-how_2 .item-how_icon{
+    background: cyan;
+}
+.item-how_2::after {
+    content: "";
+    position: absolute;
+    transform: translate(92%, 0px) rotate(180deg);
+    right: 0;
+    top: 41px;
+    width: 100%;
+    height: 11px;
+    background: url('../img/main/second/Group\ 20.svg') 0 0 / 100% no-repeat;
+    max-width: 210px;
+}
+.item-how_3 .item-how_icon{
+    background: plum;
+}
+
+.item-how_title {
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 30px;
+    margin-bottom: 15px;
+}
+.item-how_text {
+    font-size: 16px;
+    line-height: 26px;
+}
+
+
 /* main end */
+
+
+
+
 
 @media (max-width: 1199.98px) {
     .main-block_container {
@@ -302,15 +396,33 @@ body {
     .content-main-block_body {
         padding-right: 0px;
     }
+    .item-how_1::after {
+        width: 170px;
+        transform: translate(72%, 0px);
+    }
+    .item-how_2::after {
+        width: 170px;
+        transform:  translate(72%, 0px) rotate(180deg);
+    }
 }
 @media (max-width: 990.98px) {
     [class*='_container'] {
         max-width: 750px;
     }
+    .item-how_1::after,
+    .item-how_2::after {
+        display: none;
+    }
+    .how_items {
+        padding: 0 35px;
+    }
 }
 @media (max-width: 767.98px) {
     [class*='_container'] {
         max-width: none;
+    }
+    .main-block {
+        padding-bottom: 40px;
     }
     .header_container {
         min-height: 0;
@@ -334,6 +446,19 @@ body {
     }
     .form-main-block_button {
         width: 100%;
+    }
+    .how_items {
+        grid-template-columns: 1fr;
+    }
+    .item-how_icon {
+        margin-bottom: 25px;
+    }
+    .how_title {
+        font-size: 30px;
+    }
+    .how {
+        padding-top: 80px;
+        padding-bottom: 80px;
     }
 }
 @media (max-width: 479.98px) {
